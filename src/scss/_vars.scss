@@ -1,0 +1,31 @@
+:root {
+  // base
+  --font-family: "Inter", sans-serif;
+  --manrope-font-family: "Manrope", sans-serif;
+
+  // colors
+  --accent-color: #4092f1;
+  --hover-accent-color: #3886E1;
+  --active-accent-color: #2176DA;
+  --light-accent-color: #edf5fe;
+  --hover-light-accent-color: #e2eefc;
+  --active-light-accent-color: #dae8fa;
+  --hover-stroke-color: #eceff8;
+  --active-stroke-color: #dae8fa;
+  --action-color: #67bb49;
+  --error-color: #ed5858;
+  --light-color: #ffffff;
+  --bg-blue: #f5f8fa;
+  --hit-bg: #eC7b52;
+  --stock-in-color: #64b847;
+  --stock-in-bg: #f0f7ee;
+  --stock-not-bg: #f7eeee;
+  --stock-not-color: #e16a6a;
+  --black-color: #000000;
+  --text-color: #1a1a1a;
+  --gray-color: #6A727B;
+}
+$widthContent: 1660;
+$offsetContainer: 15;
+$maxWidthContainer: $widthContent + ($offsetContainer * 2);
+$gap: 20px;
