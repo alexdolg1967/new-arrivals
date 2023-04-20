@@ -1,3 +1,15 @@
+a,
+button {
+  display: inline-flex;
+  align-items: center;
+  transition: transform, color, background-color, border-color 0.3s ease;
+  cursor: pointer;
+}
+a svg,
+button svg {
+  transition: transform, fill, stroke 0.3s ease;
+}
+
 .btn {
   padding: 1.4rem 2rem;
   display: inline-flex;

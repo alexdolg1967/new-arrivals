@@ -66,6 +66,10 @@ window.onload = function () {
       1024: {
         slidesPerView: 5,
         spaceBetween: 20,
+      },
+      1200: {
+        slidesPerView: 5,
+        spaceBetween: 20,
       }
     },
   });

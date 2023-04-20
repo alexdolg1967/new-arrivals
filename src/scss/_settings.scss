@@ -2,7 +2,7 @@
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 *::selection {
@@ -136,18 +136,6 @@ select {
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
-}
-
-a,
-button {
-  display: inline-flex;
-  align-items: center;
-  transition: transform, color, background-color, border-color 0.3s ease-in-out;
-  cursor: pointer;
-}
-a svg,
-button svg {
-  transition: transform, fill, stroke 0.3s ease-in-out;
 }
 
 /* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
