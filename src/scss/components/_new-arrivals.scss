@@ -131,6 +131,9 @@
     &:hover {
       color: var(--hover-accent-color);
     }
+    &:hover svg path {
+      fill: var(--hover-accent-color);
+    }
     &:visited {
       color: var(--gray-color);
     }
