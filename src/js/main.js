@@ -2,8 +2,11 @@ import "./_vendor";
 import vars from "./_vars";
 import "./_functions";
 // import "./_components";
+
 import Swiper, { Navigation, Pagination } from 'swiper';
   Swiper.use([Navigation, Pagination]);
+
+import GraphModal from "graph-modal";
 
 import { validateForms } from "./functions/validate-forms";
 import Cookies from "./vendor/js.cookie.min.js";
@@ -138,6 +141,10 @@ window.onload = function () {
             {
               rule: "minLength",
               value: 6,
+            },
+            {
+              rule: 'email',
+              errorMessage: 'Введите корректный email!'
             },
             {
               rule: "required",

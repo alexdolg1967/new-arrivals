@@ -43,7 +43,7 @@ try {
   $mail->setFrom('robot@alexdolg.ru', $subject ); // Адрес самой почты и имя отправителя
 
   // Получатель письма
-  $mail->addAddress('office@nxmarketing.ru');
+  $mail->addAddress('alexdolg1967@mail.ru');
 
   // Прикрипление файлов к письму
   if (!empty($file['name'][0])) {
