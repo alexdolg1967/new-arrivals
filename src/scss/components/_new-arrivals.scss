@@ -38,6 +38,19 @@
 
   &__slider {
     overflow: visible !important;
+
+    & .swiper-pagination {
+      display: none;
+
+      @include small-tablet {
+        display: block;
+        bottom: -35px !important;
+        text-align: left;
+      }
+      @include mobile {
+        text-align: center;
+      }
+    }
   }
 
   &__navigation {
@@ -45,11 +58,15 @@
     padding: 4px;
     top: -12%;
     right: 0;
-    display: flex;
+    display: none;
     align-items: center;
     column-gap: 4px;
     border: 1px solid var(--hover-stroke-color);
     border-radius: 100px;
+
+    @include for-tablet {
+      display: flex;
+    }
 
     & .swiper-button-prev,
     & .swiper-button-next {
@@ -71,6 +88,8 @@
       }
     }
   }
+
+
 }
 
 .product {

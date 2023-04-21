@@ -176,7 +176,7 @@ window.onload = function () {
       ];
 
       const afterFormQuestion = () => {
-        new GraphModal().open('question-thenk');
+        const modal = new GraphModal().open('question-thenk');
         // Cookies.set("succQuestionForm", "Yes", { expires: 1 });
         setTimeout(() => {
           questionForm.reset;
