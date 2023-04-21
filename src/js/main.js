@@ -141,6 +141,7 @@ window.onload = function () {
             {
               rule: "minLength",
               value: 6,
+              errorMessage: "Email должен содержать не менее 6 символов!",
             },
             {
               rule: 'email',
@@ -171,7 +172,7 @@ window.onload = function () {
             {
               rule: "minLength",
               value: 6,
-              errorMessage: "Вопрос должно содержать не менее 15 символов!",
+              errorMessage: "Вопрос должен содержать не менее 15 символов!",
             },
             {
               rule: "required",
