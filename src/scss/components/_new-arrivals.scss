@@ -59,7 +59,16 @@
       left: initial;
       right: initial;
       width: auto;
+      border-radius: 100px;
       height: 28px;
+      transition: background-color 0.4s ease;
+
+      &:hover {
+        background-color: var(--hover-light-accent-color);
+      }
+      &:active {
+        background-color: var(--active-light-accent-color);
+      }
     }
   }
 }
@@ -98,10 +107,25 @@
       column-gap: 4px;
 
       & button {
+        background-color: var(--light-color);
         box-shadow: 0px 2px 5px rgba(28, 45, 64, 0.1);
+        border-radius: 7px;
 
         &:hover svg path {
           stroke: var(--accent-color);
+        }
+
+        &:active {
+          background-color: var(--accent-color);
+        }
+
+        &:active svg rect{
+          fill: var(--accent-color);
+        }
+
+        &:active svg path {
+          stroke-width: 1.5px;
+          stroke: var(--light-color);
         }
       }
     }
@@ -131,6 +155,26 @@
         column-gap: 4px;
         background: var(--light-color);
         border-radius: 5px 5px 0px 0px;
+
+        & span {
+          transition: background-color 0.4a ease;
+        }
+
+        &:hover span {
+          color: var(--hover-accent-color);
+        }
+
+        &:hover svg path {
+          fill: var(--hover-light-accent-color);
+        }
+
+        &:active span {
+          color: var(--active-accent-color);
+        }
+
+        &:active svg path {
+          fill: var(--active-light-accent-color);
+        }
       }
     }
   }
@@ -138,7 +182,11 @@
   &__content {
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 12px;
+
+    @media screen and (min-width: 1600px) {
+      row-gap: 20px;
+    }
   }
 
   &__title {
@@ -151,7 +199,7 @@
     overflow: hidden;
     color: var(--text-color);
 
-    @include for-extra {
+    @media screen and (min-width: 1600px) {
       font-size: 1.6rem;
       height: 7.2rem;
     }
@@ -213,8 +261,12 @@
     & .price {
       margin-right: 4px;
       font-weight: 600;
-      font-size: 2rem;
+      font-size: 1.6rem;
       line-height: 1.2;
+
+      @media screen and (min-width: 1600px) {
+        font-size: 2rem;
+      }
 
       &__wrap {
         display: flex;
@@ -226,8 +278,12 @@
     & .price-old {
       margin-right: 12px;
       font-weight: 400;
-      font-size: 1.6rem;
+      font-size: 1.2rem;
       color: var(--gray-color);
+
+      @media screen and (min-width: 1600px) {
+        font-size: 1.6rem;
+      }
     }
 
   }
@@ -239,9 +295,13 @@
 
     & .quantity-basket {
       width: 100%;
-      height: 48px;
+      height: 36px;
       display: none;
       column-gap: 12px;
+
+      @media screen and (min-width: 1600px) {
+        height: 48px;
+      }
 
       & .minus,
       & .plus,
@@ -250,15 +310,45 @@
         justify-content: center;
         align-items: center;
         background: var(--light-color);
-        border: 1px solid #ECEFF8;
+        border: 1px solid var(--hover-stroke-color);
         border-radius: 7px;
       }
 
       & .minus,
       & .plus {
         padding: 0;
-        flex: 0 0 48px;
+        flex: 0 0 36px;
+        height: 36px;
         font-size: 0;
+
+        @media screen and (min-width: 1600px) {
+          flex: 0 0 48px;
+          height: 48px;
+        }
+
+        & svg path {
+          transition: fill .4s ease;
+        }
+        & svg line {
+          transition: stroke .4s ease;
+        }
+
+        &:hover svg path {
+          fill: var(--accent-color);
+        }
+        &:hover svg line {
+          stroke: var(--accent-color);
+        }
+
+        &:active {
+          background-color: var(--accent-color);
+        }
+        &:active svg path {
+          fill: var(--light-color);
+        }
+        &:active svg line {
+          stroke: var(--light-color);
+        }
       }
 
       & .counter {
@@ -266,6 +356,16 @@
         font-weight: 500;
         font-size: 16px;
         color: var(--black-color);
+        transition: background-color color .4s ease;
+
+        &:hover,
+        &:active {
+          color: var(--accent-color);
+        }
+
+        &:active {
+          background-color: var(--light-accent-color);
+        }
       }
     }
   }
@@ -277,4 +377,5 @@
   &.in-basket .product__bottom .product-btn {
     display: none;
   }
+
 }

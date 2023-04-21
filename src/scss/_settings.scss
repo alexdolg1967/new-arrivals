@@ -115,12 +115,12 @@ select {
   border-radius: 0;
   background-color: #fff;
 
-  &::-webkit-search-decoration,
-  &::-webkit-search-cancel-button,
-  &::-webkit-search-results-button,
-  &::-webkit-search-results-decoration {
-    display: none;
-  }
+  // &::-webkit-search-decoration,
+  // &::-webkit-search-cancel-button,
+  // &::-webkit-search-results-button,
+  // &::-webkit-search-results-decoration {
+  //   display: none;
+  // }
 }
 
 .visually-hidden {

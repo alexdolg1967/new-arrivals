@@ -11,7 +11,7 @@ button svg {
 }
 
 .btn {
-  padding: 1.4rem 2rem;
+  padding: .8rem 2rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -21,6 +21,19 @@ button svg {
   color: var(--light-color);
   background-color: var(--accent-color);
   border-radius: 12px;
+
+  @media screen and (min-width: 1600px) {
+    padding: 1.4rem 2rem;
+  }
+
+  &:disabled {
+    cursor:not-allowed;
+    background-color: var(--gray-color);
+
+    &:hover {
+      background-color: var(--gray-color);
+    }
+  }
 
   &:hover {
     background-color: var(--hover-accent-color);
