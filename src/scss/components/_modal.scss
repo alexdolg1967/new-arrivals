@@ -21,6 +21,10 @@
     }
   }
 
+  &.is-open .graph-modal__container {
+    display: flex !important;
+  }
+
   &__content {
     display: flex;
     flex-direction: column;
