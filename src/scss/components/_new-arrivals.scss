@@ -110,6 +110,13 @@
     & span {
       white-space: nowrap;
     }
+
+    &:hover {
+      color: var(--hover-light-accent-color);
+    }
+    &:visited {
+      color: var(--gray-color);
+    }
   }
 
   &:hover .quik-view {
