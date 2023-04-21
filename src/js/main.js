@@ -1,7 +1,7 @@
 import "./_vendor";
 import vars from "./_vars";
 import "./_functions";
-import "./_components";
+// import "./_components";
 import Swiper, { Navigation, Pagination } from 'swiper';
   Swiper.use([Navigation, Pagination]);
 
@@ -104,7 +104,7 @@ window.onload = function () {
   const questionForm = document.getElementById("question-form");
 
   if (questionForm) {
-    // const succContactForm = document.getElementById("succ_contact");
+    const succQuestionForm = document.getElementById("success__question");
 
     if (Cookies.get("succContactForm") == "Yes") {
       // succContactForm.classList.add("message--show");
@@ -176,19 +176,25 @@ window.onload = function () {
       ];
 
       const afterFormQuestion = () => {
-        succQuestionForm.classList.add("message--show");
-        succQuestionForm.innerHTML =
-          "Ваш вопрос успешно отправлен! Мы свяжемся с Вами в ближайшее время.";
-          questionForm.classList.add("is-hidden");
+        new GraphModal().open('question-thenk');
         // Cookies.set("succQuestionForm", "Yes", { expires: 1 });
+        setTimeout(() => {
+          questionForm.reset;
+        },3000)
       };
 
       const errorFormQuestion = () => {
         succQuestionForm.classList.add("message--show");
         succQuestionForm.classList.add('error-message');
-        questionForm.innerHTML =
+        succQuestionForm.innerHTML =
           "К сожалению в данный момент отправка невозможна!";
-          questionForm.classList.add("is-hidden");
+        questionForm.classList.add("is-hidden");
+        setTimeout(() => {
+          succQuestionForm.classList.remove("message--show");
+          succQuestionForm.innerHTML = '';
+          questionForm.reset;
+          questionForm.classList.remove("is-hidden");
+        },3000)
       }
 
       validateForms("#question-form", rulesQuestion, afterFormQuestion, errorFormQuestion);
@@ -207,9 +213,6 @@ window.onload = function () {
     }
 
   }
-
-
-
 
 };
 

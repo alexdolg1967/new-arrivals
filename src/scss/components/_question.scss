@@ -190,4 +190,9 @@
       color: var(--error-color) !important;
     }
   }
+  .error-message {
+    font-family: var(--manrope-font-family);
+      font-size: 1.2rem;
+      color: var(--error-color) !important;
+  }
 }
